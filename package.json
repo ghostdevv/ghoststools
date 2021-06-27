@@ -4,6 +4,16 @@
   "version": "0.0.0",
   "author": "GHOST",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE",
