@@ -6,4 +6,13 @@
 
 This package is simply a collection of functions (tools) that I use often, I plan on adding to this package often and heavily sticking to semver (as you should).
 
-### [Documentation can be viewed here](https://ghostdevv.github.io/ghoststools/)
+# Full Documentaiton
+[Documentation can be viewed here](https://ghostdevv.github.io/ghoststools/)
+
+# Example use
+```js
+import { removeKeys } from 'ghoststools'; // You can view all exported members on the docs
+
+const inputObject = { test: true, run: () => {} };
+const options = removeKeys(inputObject, 'run');
+```
