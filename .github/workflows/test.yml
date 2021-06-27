@@ -1,0 +1,21 @@
+name: Test Codebase
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test on NodeJS v12
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [ '15', '14', '13' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test using Node.js v${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm i
+      - run: npm test
