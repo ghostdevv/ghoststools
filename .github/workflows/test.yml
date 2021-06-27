@@ -9,13 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        node: [ '12', '14' ]
+        node-version: [ 12.x, 14.x ]
 
     steps:
       - uses: actions/checkout@v2
-      - name: Test using Node.js v${{ matrix.node }}
+      - name: Test using Node.js v${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
       - run: npm i
       - run: npm test
