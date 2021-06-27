@@ -4,8 +4,6 @@
 [![](https://img.shields.io/static/v1?label=Project%20Creator&message=GHOST&color=informational&style=for-the-badge)](https://ghostdev.xyz)
 [![](https://img.shields.io/github/workflow/status/ghostdevv/ghoststools/Test%20Codebase/main?style=for-the-badge)](https://github.com/ghostdevv/ghoststools)
 
-This package is simply a collection of functions (tools) that I use often
+This package is simply a collection of functions (tools) that I use often, I plan on adding to this package often and heavily sticking to semver (as you should).
 
-# Methods
-
-- `get
+### [Documentation can be viewed here](https://ghostdevv.github.io/ghoststools/)
