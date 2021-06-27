@@ -1,3 +1,1 @@
-export function test() {
-    return 1 + 1;
-}
+export * from './keys';
