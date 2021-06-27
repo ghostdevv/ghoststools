@@ -24,7 +24,7 @@
     "dev:ts": "tsup-node --watch src",
     "dev:nodemon": "nodemon dev/index.js",
     "build": "tsup-node",
-    "docs": "typedoc src/index.ts",
+    "docs": "typedoc src/index.ts --theme minimal",
     "test": "run-s test:*",
     "test:build-lib": "npm run build",
     "test:test": "uvu tests"
