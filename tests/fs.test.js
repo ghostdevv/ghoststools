@@ -1,7 +1,7 @@
 import * as assert from 'uvu/assert';
 import { suite } from 'uvu';
 
-import { posixify } from '../dist/index.js';
+import { posixify, readdirRecursive } from '../dist/index.js';
 
 const pos = suite('posixify');
 
@@ -13,3 +13,12 @@ pos('fn works', () => {
 });
 
 pos.run();
+
+const readdir = suite('readdir recursive');
+
+readdir('fn works', () => {
+    const x = readdirRecursive('tests/testFiles');
+    console.log(x);
+});
+
+readdir.run();
