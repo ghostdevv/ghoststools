@@ -7,7 +7,7 @@
 This package is simply a collection of functions (tools) that I use often, I plan on adding to this package often and heavily sticking to semver (as you should).
 
 # Full Documentaiton
-[Documentation can be viewed here](https://ghostdevv.github.io/ghoststools/)
+[Documentation can be viewed here](https://ghostdevv.github.io/ghoststools/) - If docs seem out of date use ctrl + f5 to "hard refresh"
 
 # Example use
 ```js
