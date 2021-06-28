@@ -2705,6 +2705,12 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-function">
+			<a href="modules.html#posixify" class="tsd-kind-icon">posixify</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="modules.html#readdirrecursive" class="tsd-kind-icon">readdir<wbr>Recursive</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="modules.html#removekeys" class="tsd-kind-icon">remove<wbr>Keys</a>
 		</li>
 	</ul>
@@ -2719,9 +2725,18 @@ img {
 				<a href="https://ghostdev.xyz"><img src="https://img.shields.io/static/v1?label=Project%20Creator&message=GHOST&color=informational&style=for-the-badge" alt=""></a>
 			<a href="https://github.com/ghostdevv/ghoststools"><img src="https://img.shields.io/github/workflow/status/ghostdevv/ghoststools/Test%20Codebase/main?style=for-the-badge" alt=""></a></p>
 			<p>This package is simply a collection of functions (tools) that I use often, I plan on adding to this package often and heavily sticking to semver (as you should).</p>
-			<a href="#documentation-can-be-viewed-here" id="documentation-can-be-viewed-here" style="color: inherit; text-decoration: none;">
-				<h3><a href="https://ghostdevv.github.io/ghoststools/">Documentation can be viewed here</a></h3>
+			<a href="#full-documentaiton" id="full-documentaiton" style="color: inherit; text-decoration: none;">
+				<h1>Full Documentaiton</h1>
 			</a>
+			<p><a href="https://ghostdevv.github.io/ghoststools/">Documentation can be viewed here</a></p>
+			<a href="#example-use" id="example-use" style="color: inherit; text-decoration: none;">
+				<h1>Example use</h1>
+			</a>
+			<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">removeKeys</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;ghoststools&#039;</span><span style="color: #000000">; </span><span style="color: #008000">// You can view all exported members on the docs</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">inputObject</span><span style="color: #000000"> = { </span><span style="color: #001080">test:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #795E26">run</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {} };</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">options</span><span style="color: #000000"> = </span><span style="color: #795E26">removeKeys</span><span style="color: #000000">(</span><span style="color: #001080">inputObject</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;run&#039;</span><span style="color: #000000">);</span>
+</code></pre>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
@@ -2731,6 +2746,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-function"><a href="modules.html#posixify" class="tsd-kind-icon">posixify</a></li>
+							<li class="tsd-kind-function"><a href="modules.html#readdirrecursive" class="tsd-kind-icon">readdir<wbr>Recursive</a></li>
 							<li class="tsd-kind-function"><a href="modules.html#removekeys" class="tsd-kind-icon">remove<wbr>Keys</a></li>
 						</ul>
 					</section>
@@ -2739,6 +2756,62 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="posixify" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> posixify</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">posixify<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/ghostdevv/ghoststools/blob/d2aaeea/src/fs.ts#L7">fs.ts:7</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Normalises all paths to posix style</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>path: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="readdirrecursive" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> readdir<wbr>Recursive</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">readdir<wbr>Recursive<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/ghostdevv/ghoststools/blob/d2aaeea/src/fs.ts#L12">fs.ts:12</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get all files within a directory recursively (includes sub directories)</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>path: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="removekeys" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> remove<wbr>Keys</h3>
@@ -2749,7 +2822,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/ghostdevv/ghoststools/blob/37488ea/src/keys.ts#L4">keys.ts:4</a></li>
+								<li>Defined in <a href="https://github.com/ghostdevv/ghoststools/blob/d2aaeea/src/keys.ts#L4">keys.ts:4</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
