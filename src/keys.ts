@@ -1,7 +1,7 @@
 /**
  * Removes all the keys from a given object and returns it (doesn't mutate the given object)
  */
-export const removeKeys = (object: object, keys: string | string[]) => {
+export const removeKeys = (object: object, keys: string | string[]): object => {
     if (!Array.isArray(keys)) keys = [keys];
 
     const entries = Object.entries(object);

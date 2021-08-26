@@ -5,12 +5,12 @@ import { castToArray } from './cast';
 /**
  * Normalises all paths to posix style
  */
-export const posixify = (path: string) => path.replace(/\\/g, '/');
+export const posixify = (path: string): string => path.replace(/\\/g, '/');
 
 /**
  * Get all files within a directory recursively (includes sub directories)
  */
-export const readdirRecursive = (path: string): any => {
+export const readdirRecursive = (path: string): string[] => {
     const paths: string[] = readdirSync(resolve(path));
 
     return paths
