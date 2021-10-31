@@ -1,5 +1,5 @@
 import { lstatSync, readdirSync, existsSync } from 'fs';
-import { join, resolve } from 'path';
+import { join, resolve, extname } from 'path';
 import { normalize } from 'path/posix';
 import { castToArray } from './cast';
 
@@ -19,6 +19,11 @@ export const stripTrailingSlash = (path: string) =>
  */
 export const fullNormalize = (path: string) =>
     stripTrailingSlash(normalize(path));
+
+/**
+ * This removes the file extension from the path
+ */
+export const stripExt = (path: string) => path.slice(0, -extname(path).length);
 
 /**
  * Get all files within a directory recursively (includes sub directories)
