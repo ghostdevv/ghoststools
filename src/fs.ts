@@ -8,6 +8,12 @@ import { castToArray } from './cast';
 export const posixify = (path: string): string => path.replace(/\\/g, '/');
 
 /**
+ * Removes the trailing slash on a path - removes both \ and /
+ */
+export const stripTrailingSlash = (path: string) =>
+    path.replace(/\\+$/, '').replace(/\/+$/, '');
+
+/**
  * Get all files within a directory recursively (includes sub directories)
  */
 export const readdirRecursive = (path: string): string[] => {
