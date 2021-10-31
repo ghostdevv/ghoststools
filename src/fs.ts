@@ -1,5 +1,6 @@
 import { lstatSync, readdirSync, existsSync } from 'fs';
 import { join, resolve } from 'path';
+import { normalize } from 'path/posix';
 import { castToArray } from './cast';
 
 /**
@@ -12,6 +13,12 @@ export const posixify = (path: string): string => path.replace(/\\/g, '/');
  */
 export const stripTrailingSlash = (path: string) =>
     path.replace(/\\+$/, '').replace(/\/+$/, '');
+
+/**
+ * This combines path.normalize and stripTrailingSlash to fully normalize a path
+ */
+export const fullNormalize = (path: string) =>
+    stripTrailingSlash(normalize(path));
 
 /**
  * Get all files within a directory recursively (includes sub directories)
