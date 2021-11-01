@@ -23,7 +23,8 @@ export const fullNormalize = (path: string) =>
 /**
  * This removes the file extension from the path
  */
-export const stripExt = (path: string) => path.slice(0, -extname(path).length);
+export const stripExt = (path: string) =>
+    path.slice(0, -extname(path).length || undefined);
 
 /**
  * Get all files within a directory recursively (includes sub directories)
