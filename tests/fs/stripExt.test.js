@@ -21,7 +21,7 @@ test("doesn't remove non exts", () => {
     const str = `/home/ghost/pog.js/pog.test.js`;
     const normal = stripExt(str);
 
-    assert.match(normal, '/home/ghost/pog.test');
+    assert.match(normal, '/home/ghost/pog.js/pog.test');
 });
 
 test.run();
