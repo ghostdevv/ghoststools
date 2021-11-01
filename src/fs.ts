@@ -1,7 +1,7 @@
 import { lstatSync, readdirSync, existsSync } from 'fs';
 import { join, resolve, extname } from 'path';
-import { normalize } from 'path/posix';
 import { castToArray } from './cast';
+import { normalize } from 'path';
 
 /**
  * Normalises all paths to posix style
