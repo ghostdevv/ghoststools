@@ -1,7 +1,7 @@
 {
   "name": "ghoststools",
   "description": "A collection of functions (tools) I commonly use",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "author": "GHOST",
   "license": "MIT",
   "type": "module",
