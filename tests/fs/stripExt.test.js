@@ -3,18 +3,25 @@ import { test } from 'uvu';
 
 import { stripExt } from '../../dist/index.js';
 
-test('test 1', () => {
+test('works', () => {
     const str = `/home/ghost/pog.js`;
     const normal = stripExt(str);
 
     assert.match(normal, '/home/ghost/pog');
 });
 
-test('test 2', () => {
-    const str = `C:\\Users\\GHOST\\Desktop\\pog.txt`;
+test("doesn't break if there is no ext", () => {
+    const str = `/home/ghost/pog`;
     const normal = stripExt(str);
 
-    assert.match(normal, 'C:\\Users\\GHOST\\Desktop\\pog');
+    assert.match(normal, '/home/ghost/pog');
+});
+
+test("doesn't remove non exts", () => {
+    const str = `/home/ghost/pog.js/pog.test.js`;
+    const normal = stripExt(str);
+
+    assert.match(normal, '/home/ghost/pog.test');
 });
 
 test.run();
