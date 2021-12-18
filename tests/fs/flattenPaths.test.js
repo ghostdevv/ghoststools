@@ -8,6 +8,8 @@ test('fn works', () => {
     const paths = flattenPaths('tests/fs/testFiles');
 
     assert.equal(paths, [
+        resolve('tests/fs/testFiles/_ignored/test.txt'),
+        resolve('tests/fs/testFiles/_ignored.txt'),
         resolve('tests/fs/testFiles/test.txt'),
         resolve('tests/fs/testFiles/testdir/test.txt'),
     ]);
