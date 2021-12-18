@@ -15,4 +15,15 @@ test('fn works', () => {
     ]);
 });
 
+test('filter works', () => {
+    const files = readdirRecursive('tests/fs/testFiles', {
+        filter: (file) => !file.startsWith('_'),
+    });
+
+    assert.equal(files, [
+        resolve('tests/fs/testFiles/test.txt'),
+        resolve('tests/fs/testFiles/testdir/test.txt'),
+    ]);
+});
+
 test.run();
